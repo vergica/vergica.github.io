@@ -1,0 +1,43 @@
+﻿@media only screen and (min-width : 992px) {
+    html {
+        width: 48rem;
+        position: relative;
+        left: 50%;
+        float: left;
+    }
+
+    body {
+        position: relative;
+        left: -50%;
+    }
+}
+
+ul {
+    margin: 1rem;
+}
+
+.limit {
+    width: 100%;
+}
+
+td {
+    width: 50%;
+}
+
+svg {
+    margin-top: 8px;
+}
+
+footer {
+    max-width: 690px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#next {
+    float: right;
+}
+
+small {
+    color: rgba(158,158,158,1);
+}
