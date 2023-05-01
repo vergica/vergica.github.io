@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # OS X
 .DS_Store
 
@@ -29,3 +30,10 @@ tmp
 vendor
 Gemfile.lock
 node_modules
+=======
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+>>>>>>> c4507db0c967c6c99a4d901e3327f22c7a5e7f8b
