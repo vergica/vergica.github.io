@@ -23,12 +23,12 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- CSS TEMPLATE -->
-    <link href="/theme/css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="/theme/css/framework.css" rel="stylesheet" type="text/css" />
-    <link href="/theme/css/typography.css" rel="stylesheet" type="text/css" />
-    <link href="/theme/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="https://vergica.github.io/theme/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="https://vergica.github.io/theme/css/framework.css" rel="stylesheet" type="text/css" />
+    <link href="https://vergica.github.io/theme/css/typography.css" rel="stylesheet" type="text/css" />
+    <link href="https://vergica.github.io/theme/css/layout.css" rel="stylesheet" type="text/css" />
 
-    <link href="/theme/css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="https://vergica.github.io/theme/css/blog.css" rel="stylesheet" type="text/css" />
 
     <!-- ICONS -->
         <link rel="shortcut icon" href="/theme/img/icon.jpg" type="image/x-icon" />
@@ -39,7 +39,7 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
 
     <!-- Morenizr -->
-    <script type="text/javascript" src="/theme/js/modernizr.min.js"></script>
+    <script type="text/javascript" src="https://vergica.github.io/theme/js/modernizr.min.js"></script>
 
     <!-- google authorship -->
 </head>
@@ -57,7 +57,7 @@
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
 <!--        <a class="navbar-brand scrollTo" href="#home">-->
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="https://vergica.github.io/index.html">
           <img src="/theme/img/icon.jpg" alt="" width="50" height="50" />
           <span class="hidden-xs">梅岭随记</span>
         </a>
@@ -71,10 +71,10 @@
 
         <ul class="nav navbar-nav navbar-right">
           <!-- If the user wants to make articles the home page then remove blog link, and make about and work links point to old home page. -->
-            <li><a href="/index.html#home">Home</a></li>
-            <li><a href="/index.html#about">About</a></li>
-            <li><a href="/index.html#work">Work</a></li>
-            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="https://vergica.github.io/index.html#home">Home</a></li>
+            <li><a href="https://vergica.github.io/index.html#about">About</a></li>
+            <li><a href="https://vergica.github.io/index.html#work">Work</a></li>
+            <li><a href="https://vergica.github.io/blog.html">Blog</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -91,8 +91,8 @@
   <header>
       <h1>更换博客主题和相应配置</h1>
     <small class="fsize13">
-            <a href="/category/python.html" rel="tag tooltip" class="label label-default light" data-placement="right" data-original-title="2 articles in this category"><i class="fa fa-dot-circle-o"></i> Python</a>
-<!--      <a href="/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/#disqus_thread" class="scrollTo label label-default light" data-disqus-identifier="2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/"><i class="fa fa-comment-o"></i> ?? Comments</a>-->
+            <a href="https://vergica.github.io/category/python.html" rel="tag tooltip" class="label label-default light" data-placement="right" data-original-title="2 articles in this category"><i class="fa fa-dot-circle-o"></i> Python</a>
+<!--      <a href="https://vergica.github.io/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/#disqus_thread" class="scrollTo label label-default light" data-disqus-identifier="2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/"><i class="fa fa-comment-o"></i> ?? Comments</a>-->
       <span class="label label-default light">2024-08-15</span> 
     </small>
   </header>
@@ -198,7 +198,7 @@
 
 <span class="cm">&lt;!--nav.html--&gt;</span>
 <span class="cm">&lt;!--&lt;a class=&quot;navbar-brand scrollTo&quot; href=&quot;#home&quot;&gt;--&gt;</span>
-<span class="nt">&lt;a</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;a</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span><span class="nv">SITEURL</span><span class="cp">}}</span><span class="s">/index.html&quot;</span><span class="nt">&gt;</span>
 ......
 <span class="cm">&lt;!--&lt;a href=&quot;#&quot; class=&quot;btn-fullscreen&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;--&gt;</span>
 </code></pre></div>
@@ -220,8 +220,6 @@
 <span class="o">//</span><span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">POST_LIMIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="o">//</span><span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">POST_COUNT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseInt</span><span class="p">(</span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#blog_main_area&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">),</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
 <span class="o">//</span><span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#prev&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="o">...</span>
-<span class="o">//</span><span class="w">      </span><span class="p">}</span>
-<span class="o">//</span>
 <span class="o">//</span><span class="w">    </span><span class="p">});</span>
 <span class="o">//</span><span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#next&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="o">...</span>
 <span class="o">//</span><span class="w">    </span><span class="p">});</span>
@@ -274,17 +272,28 @@
 <span class="w">  </span><span class="p">}</span>
 <span class="p">});</span>
 </code></pre></div>
+
+<p>最后修改pelicanconf.py及publishconf.py，设置SITEURL为个人网站网址，重新推送：</p>
+<div class="highlight"><pre><span></span><code>SITEURL = &quot;https://vergica.github.io&quot;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="na">.venv</span><span class="err">\</span><span class="no">Scripts</span><span class="err">\</span><span class="no">pelican</span><span class="w"> </span><span class="no">content</span>
+<span class="nf">cd</span><span class="w"> </span><span class="no">output</span>
+<span class="nf">git</span><span class="w"> </span><span class="no">add</span><span class="w"> </span><span class="p">.</span>
+<span class="nf">git</span><span class="w"> </span><span class="no">commit</span><span class="w"> </span><span class="p">-</span><span class="no">m</span><span class="w"> </span><span class="err">&quot;</span><span class="no">modify</span><span class="err">&quot;</span>
+<span class="nf">git</span><span class="w"> </span><span class="no">push</span><span class="w"> </span><span class="no">origin</span><span class="w"> </span><span class="no">master</span>
+</code></pre></div>
   </article>
 
   <div class="divider"><!-- lines divider --></div>
 
   <!-- SOCIAL -->
 <p class="socials">
-    <a href="http://www.facebook.com/sharer/sharer.php?u=/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-facebook" target="_blank" title="Share on Facebook"><!-- facebook --></a>
-    <a href="http://twitter.com/home?status=/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-twitter" target="_blank" title="Share on Twitter"><!-- twitter --></a>
-    <a href="https://plus.google.com/share?url=/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-google-plus" target="_blank" title="Share on Google+"><!-- google plus --></a>
-    <a href="http://pinterest.com/pin/create/link/?url==/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-pinterest"  target="_blank" title="Share on Pinterest"><!-- pinterest --></a>
-    <a href="http://www.linkedin.com/shareArticle?mini=true&url=/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/&title=更换博客主题和相应配置&summary=&source=" class="rounded-icon social fa fa-linkedin" target="_blank" title="Share on Linkedin"><!-- linkedin --></a>
+    <a href="http://www.facebook.com/sharer/sharer.php?u=https://vergica.github.io/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-facebook" target="_blank" title="Share on Facebook"><!-- facebook --></a>
+    <a href="http://twitter.com/home?status=https://vergica.github.io/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-twitter" target="_blank" title="Share on Twitter"><!-- twitter --></a>
+    <a href="https://plus.google.com/share?url=https://vergica.github.io/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-google-plus" target="_blank" title="Share on Google+"><!-- google plus --></a>
+    <a href="http://pinterest.com/pin/create/link/?url==https://vergica.github.io/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-pinterest"  target="_blank" title="Share on Pinterest"><!-- pinterest --></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://vergica.github.io/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/&title=更换博客主题和相应配置&summary=&source=" class="rounded-icon social fa fa-linkedin" target="_blank" title="Share on Linkedin"><!-- linkedin --></a>
 </p>  
 
   <!-- TAGS -->
@@ -305,23 +314,23 @@
                       <h3>Recent Work</h3>
 
                       <a class="popup-image thumb" href="assets/images/preview/slider/1.jpg">
-                          <img src="/theme/img/1x1.png" class="img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
+                          <img src="https://vergica.github.io/theme/img/1x1.png" class="img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
                       </a>
                       <a class="popup-video thumb" href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0">
-                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
+                          <img src="https://vergica.github.io/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
                       </a>
                       <a class="popup-video thumb" href="http://vimeo.com/23630702">
-                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
+                          <img src="https://vergica.github.io/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
                       </a>
 
                       <a class="external ajax-project thumb" href="project-external-1.html">
-                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
+                          <img src="https://vergica.github.io/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
                       </a>
                       <a class="external ajax-project thumb" href="project-external-2.html">
-                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
+                          <img src="https://vergica.github.io/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
                       </a>
                       <a class="external ajax-project thumb" href="project-external-3.html">
-                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
+                          <img src="https://vergica.github.io/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
                       </a>
 
                       <div class="clearfix"></div>
@@ -333,7 +342,7 @@
             <h3>Categories</h3>
 
             <ul>
-               <li><a class="theme_link" href="/category/python.html"><i class="fa fa-dot-circle-o"></i> Python</a>
+               <li><a class="theme_link" href="https://vergica.github.io/category/python.html"><i class="fa fa-dot-circle-o"></i> Python</a>
               </li>
             </ul>
 
@@ -358,11 +367,11 @@
                                 <span><i class="fa fa-plus-square-o"></i>2024-08</span>
                                 <ul>
                                         <li style="display: none;">
-                                            <a class="theme_link" href="/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/">
+                                            <a class="theme_link" href="https://vergica.github.io/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/">
                                             <small>2024-08-15</small>更换博客主题和相应配置</a>
                                         </li>
                                         <li style="display: none;">
-                                            <a class="theme_link" href="/2024/08/windowsxi-tong-xia-shi-yong-pelican-github-pagesbu-shu-ge-ren-bo-ke/">
+                                            <a class="theme_link" href="https://vergica.github.io/2024/08/windowsxi-tong-xia-shi-yong-pelican-github-pagesbu-shu-ge-ren-bo-ke/">
                                             <small>2024-08-15</small>Windows系统下使用Pelican + GitHub Pages部署个人博客</a>
                                         </li>
                                 </ul>
@@ -408,25 +417,25 @@
 <!-- CORE FILES -->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/theme/js/jquery.isotope.js"></script>
-<script type="text/javascript" src="/theme/js/masonry.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/jquery.isotope.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/masonry.js"></script>
 
 <!-- PLUGINS -->
-<script type="text/javascript" src="/theme/js/jquery.fitvids.min.js"></script>
-<script type="text/javascript" src="/theme/js/jquery.appear.js"></script>
-<script type="text/javascript" src="/theme/js/jquery.superslides.min.js"></script>
-<script type="text/javascript" src="/theme/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="/theme/js/jquery.carouFredSel-6.2.1-packed.js"></script>
-<script type="text/javascript" src="/theme/js/jquery.countTo.js"></script>
-<script type="text/javascript" src="/theme/js/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="/theme/js/holder.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/jquery.fitvids.min.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/jquery.appear.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/jquery.superslides.min.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/holder.js"></script>
 <!-- delete on production -->
 
 <!-- js scripts -->
-<script async type="text/javascript" src="/theme/js/scripts.js"></script>
+<script async type="text/javascript" src="https://vergica.github.io/theme/js/scripts.js"></script>
 
-<script type="text/javascript" src="/theme/js/ImageAutoResize.js"></script>
-<script type="text/javascript" src="/theme/js/application.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/ImageAutoResize.js"></script>
+<script type="text/javascript" src="https://vergica.github.io/theme/js/application.js"></script>
 
 
 
