@@ -1,119 +1,391 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
+
 <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="generator" content="Pelican" />
-        <title>梅岭随记 - 挪希</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>梅岭随记 - 挪希的博客</title>
+    <meta name="description" content="" />
+    <meta name="Author" content="Vergica" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/plugins/lt-ie9/html5.js"></script>
+    <script type="text/javascript" src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/plugins/lt-ie9/respond.min.js"></script>
+    <script type="text/javascript" src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/plugins/lt-ie9/excanvas.compiled.js"></script>
+    <![endif]-->
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Dosis:300,400" rel="stylesheet" type="text/css" />
+
+
+    <!-- CORE CSS FRAMEWORK -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- CSS TEMPLATE -->
+    <link href="/theme/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/theme/css/framework.css" rel="stylesheet" type="text/css" />
+    <link href="/theme/css/typography.css" rel="stylesheet" type="text/css" />
+    <link href="/theme/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <link href="/theme/css/blog.css" rel="stylesheet" type="text/css" />
+
+    <!-- ICONS -->
+        <link rel="shortcut icon" href="/theme/img/icon.jpg" type="image/x-icon" />
+        <link rel="icon" href="/theme/img/icon.jpg" type="image/x-icon" />
+        <link rel="shortcut icon" href="/theme/img/icon.jpg" type="image/x-icon" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- Morenizr -->
+    <script type="text/javascript" src="/theme/js/modernizr.min.js"></script>
+
+    <!-- google authorship -->
 </head>
+<body>
+    <!-- HOME -->
+    <section id="home" class="full-screen"><!-- full-screen or half-screen (550px height) -->
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">梅岭随记</a></h1>
-                <nav><ul>
-                    <li><a href="/category/python.html">Python</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+    <div id="slider">
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/windowsxi-tong-xia-shi-yong-pelican-github-pagesbu-shu-ge-ren-bo-ke.html">Windows系统下使用Pelican + GitHub Pages部署个人博客</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2024-08-15T16:50:00+02:00">
-                Published: 周四 15 八月 2024
-        </abbr>
+        <ul class="slides-container">
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/nuo-xi.html">挪希</a>
-        </address>
-<p>In <a href="/category/python.html">Python</a>.</p>
-<p>tags: <a href="/tag/pelican.html">Pelican</a> <a href="/tag/github.html">GitHub</a> </p>
-</footer><!-- /.post-info --><h2>Windows系统下使用Pelican + GitHub Pages部署个人博客</h2>
-<h3>安装Pelican并尝试使用</h3>
+        <!-- Item 1 -->
+        <li>
+            <div class="image-caption">
+            <hr /><hr />
+            <div class="inner">
+                <h2 class="bigtext strtoupper nomargin">梅岭随记</h2>
+            </div>
+            <hr /><hr />
+            </div>
+            <span class="overlay"></span>
+<!--            -->
+<!--            <div style="background-image: url('/theme/img/icon.jpg');" class="fullscreen-img"></div>-->
+<!--                       -->
+            <div style="background-image: url('/theme/img/background.jpg');" class="fullscreen-img"></div>
+
+        </li>
+        </ul>
+
+    </div>
+
+    </section>
+    <!-- /HOME -->
+
+
+
+    <!-- Main Nav -->
+<!-- Main Nav -->
+<header id="header" style="margin-top:0">
+
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenu" class="fa fa-bars" type="button" data-toggle="collapse" data-target=".navbar-collapse"></button>
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+<!--        <a class="navbar-brand scrollTo" href="#home">-->
+        <a class="navbar-brand" href="/">
+          <img src="/theme/img/icon.jpg" alt="" width="50" height="50" />
+          <span class="hidden-xs">梅岭随记</span>
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <!-- Fullscreen Button - Unavailable for IE -->
+<!--        <a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>-->
+
+        <ul class="nav navbar-nav navbar-right">
+          <!-- If the user wants to make articles the home page then remove blog link, and make about and work links point to old home page. -->
+            <li><a href="/index.html#home">Home</a></li>
+            <li><a href="/index.html#about">About</a></li>
+            <li><a href="/index.html#work">Work</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+</header>
+<!-- /Main Nav -->
+    <!-- /Main Nav -->
+
+    <!-- ABOUT -->
+    <section id="about">
+    <div class="container">
+        <header class="text-center">
+        <h1>ABOUT</h1>
+        </header>
+
+        <div class="divider"><!-- lines divider --></div>
+
+        <article class="text-center big-paragraph">
+            <p>「现代人饮酒讲格调，不讲诗酒。袁枚在《随园诗话》里提过杨诚斋的话：“从来天分低拙之人，好谈格调，而不解风趣，何也？格调是空架子，有腔口易描，风趣专写性灵，非天才不辨。”在秦楼酒馆饮酒作乐，这是格调，能把去年的月光温到今年才下酒，这是风趣，也是性灵，其中是有几分天分的。」</p>
+        </article>
+
+<!--        <div class="me-picture text-center">-->
+        <div class="me-picture text-center" style="margin-bottom: 0 !important;">
+            <div class="item">
+            <img class="img-responsive" src="/theme/img/personal_photo.jpg" width="200" height="200" alt="" />
+            </div><hr />
+        </div>
+
+        <!-- <article>
+        <div class="row text-left"> -->
+
+            <!-- Passion -->
+        <!--  <div class="col-md-4">
+            <h3>Passion</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+            </div> -->
+
+
+            <!-- Precision -->
+            <!-- <div class="col-md-4">
+            <h3>Precision</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+            </div> -->
+
+
+            <!-- Simplicity -->
+            <!-- <div class="col-md-4">
+            <h3>Simplicity</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis.</p>
+            </div> -->
+
+        <!-- </div>
+        </article> -->
+
+    </div>
+    </section>
+    <!-- /ABOUT -->
+
+    <!-- WORK -->
+    <section id="work" class="alternate arrow-down">
+    <div class="container">
+        <header class="text-center">
+        <h1>MY WORK</h1>
+        </header>
+
+        <div class="divider"><!-- lines divider --></div>
+
+<!--        -->
+<!--        <article>-->
+<!--        <p>-->
+<!--            True-->
+<!--        </p>-->
+<!--        </article>-->
+<!--        -->
+
+
+        <div id="portfolio" class="text-center animate_fade_in">
+
+        <div class="row">
+
+            <ul class="sort-destination isotope" data-sort-id="isotope-list">
+
+
+            <!-- item -->
+            <!-- <li class="isotope-item col-sm-6 col-md-4 image">
+                <a class="popup-image" href="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p1.jpg">
+                <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p1.jpg" class="img-responsive" alt="img" />
+                <div class="caption">
+                    <i class="rounded fa fa-camera"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>Image Popup</p>
+                </div>
+                </a>
+            </li> -->
+
+            <!-- item -->
+            <!-- <li class="isotope-item col-sm-6 col-md-4 video">
+                <a class="popup-video" href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0">
+                <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p2.jpg" class="img-responsive" alt="img" />
+                <div class="caption">
+                    <i class="rounded fa fa-film"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>Youtube Videofdafdsf
+                    fadsfaf
+                    fasdfadsfa
+                    fasdfadf
+                    afadsfa</p>
+                </div>
+                </a>
+            </li> -->
+
+            <!-- item -->
+            <!-- <li class="isotope-item col-sm-6 col-md-4 video brand">
+                <a class="popup-video" href="http://vimeo.com/23630702">
+                <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p3.jpg" class="img-responsive" alt="img" />
+                <div class="caption">
+                    <i class="rounded fa fa-film"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>Vimeo Video</p>
+                </div>
+                </a>
+            </li> -->
+
+            <!-- item -->
+            <!-- <li class="isotope-item col-sm-6 col-md-4 brand">
+                <a class="external ajax-project" href="project-external-1.html">
+                <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p4.jpg" class="img-responsive" alt="img" />
+                <div class="caption">
+                    <i class="rounded fa fa-link"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>External Project 1</p>
+                </div>
+                </a>
+            </li> -->
+
+            <!-- item -->
+            <!-- <li class="isotope-item col-sm-6 col-md-4 brand">
+                <a class="external ajax-project" href="project-external-2.html">
+                <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p5.jpg" class="img-responsive" alt="img" />
+                <div class="caption">
+                    <i class="rounded fa fa-link"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>External Project 2</p>
+                </div>
+                </a>
+            </li> -->
+
+            <!-- item -->
+            <!-- <li class="isotope-item col-sm-6 col-md-4 brand">
+                <a class="external ajax-project" href="project-external-3.html">
+                <img src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/images/preview/content/portfolio/p6.jpg" class="img-responsive" alt="img" />
+                <div class="caption">
+                    <i class="rounded fa fa-link"></i>
+                    <h3>PROJECT TITLE</h3>
+                    <p>External Project 3</p>
+                </div>
+                </a>
+            </li> -->
+
+            </ul>
+        </div>
+
+        </div>
+
+
+    </div>
+    </section>
+    <!-- /WORK -->
+
+    <!-- BLOG -->
+    <section id="quick-blog" class="alternate">
+    <div class="container">
+
+        <header class="text-center">
+        <h1>BLOG</h1>
+        <p>RECENT ENTRIES</p>
+        </header>
+
+        <div class="divider"><!-- lines divider --></div>
+
+        <article>
+        <div class="row animate_fade_in">
+
+            <div class="col-md-4 quick-hover">
+                <div class="quick-item">
+                    <h4><a class="theme_link" href="/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/">更换博客主题和相应配置</a></h4>
+                <p><p>下载主题<a href="https://github.com/KenMercusLai/BT3-Flat">BT3-Flat</a>至博客根目录：</p>
+<div class="highlight"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">KenMercusLai</span><span class="o">/</span><span class="n">BT3</span><span class="o">-</span><span class="n">Flat</span><span class="p">.</span><span class="n">git</span>
+</code></pre></div>
+
+<p>修改配置文件pelicanconf.py：</p>
+<div class="highlight"><pre><span></span><code><span class="o">......</span>
+<span class="err">#</span><span class="w"> </span><span class="nt">Blogroll</span>
+<span class="nt">LINKS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;Pelican&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;https://getpelican.com/&quot;</span><span class="o">),</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;Python.org&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;https://www.python.org/&quot;</span><span class="o">),</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;Jinja2&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;https://palletsprojects.com/p/jinja/&quot;</span><span class="o">),</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;You can modify those …</span></code></pre></div></p>
+                <a href="/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="btn btn-xs theme_link"><i class="fa fa-sign-out"></i> READ MORE</a>
+                </div>
+            </div>
+            <div class="col-md-4 quick-hover">
+                <div class="quick-item">
+                    <h4><a class="theme_link" href="/2024/08/windowsxi-tong-xia-shi-yong-pelican-github-pagesbu-shu-ge-ren-bo-ke/">Windows系统下使用Pelican + GitHub Pages部署个人博客</a></h4>
+                <p><h4>安装Pelican并尝试使用</h4>
 <p>首先创建一个新的Python项目，并在该路径下打开终端。</p>
 <p>执行以下命令安装Pelican，并生成一个简单的网站架构：</p>
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="n">venv</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">pelican</span><span class="o">[</span><span class="n">markdown</span><span class="o">]</span>
-<span class="p">.</span><span class="n">venv</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">--</span><span class="n">upgrade</span><span class="w"> </span><span class="n">pip</span>
-<span class="p">.</span><span class="n">venv</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span>
-</code></pre></div>
+<span class="p">.</span><span class="n">venv …</span></code></pre></div></p>
+                <a href="/2024/08/windowsxi-tong-xia-shi-yong-pelican-github-pagesbu-shu-ge-ren-bo-ke/" class="btn btn-xs theme_link"><i class="fa fa-sign-out"></i> READ MORE</a>
+                </div>
+            </div>
+ 
 
-<p>此时需要回答一系列问题帮助创建文件，其中默认语言若选择简体中文，在之后的过程中会发生错误，其余问题可按个人需求回答：</p>
-<div class="highlight"><pre><span></span><code><span class="p">&gt;</span><span class="w"> </span><span class="nx">Where</span><span class="w"> </span><span class="nx">do</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="nx">want</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">create</span><span class="w"> </span><span class="nx">your</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">web</span><span class="w"> </span><span class="nx">site</span><span class="p">?</span><span class="w"> </span><span class="p">[.]</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">What</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">this</span><span class="w"> </span><span class="nx">web</span><span class="w"> </span><span class="nx">site</span><span class="p">?</span><span class="w"> </span><span class="nx">梅岭随记</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">Who</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">author</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">this</span><span class="w"> </span><span class="nx">web</span><span class="w"> </span><span class="nx">site</span><span class="p">?</span><span class="w"> </span><span class="nx">挪希</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">What</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">language</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">this</span><span class="w"> </span><span class="nx">web</span><span class="w"> </span><span class="nx">site</span><span class="p">?</span><span class="w"> </span><span class="p">[</span><span class="nx">Chinese</span><span class="w"> </span><span class="p">(</span><span class="nx">Simplified</span><span class="p">)]</span><span class="w"> </span><span class="nx">en</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">Do</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="nx">want</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">specify</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">URL</span><span class="w"> </span><span class="nx">prefix</span><span class="p">?</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">g</span><span class="p">.,</span><span class="w"> </span><span class="nx">https</span><span class="p">:</span><span class="c1">//example.com   (Y/n) n</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">Do</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="nx">want</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">enable</span><span class="w"> </span><span class="nx">article</span><span class="w"> </span><span class="nx">pagination</span><span class="p">?</span><span class="w"> </span><span class="p">(</span><span class="nx">Y</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span><span class="w"> </span><span class="nx">n</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">What</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">your</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="nx">zone</span><span class="p">?</span><span class="w"> </span><span class="p">[</span><span class="nx">Europe</span><span class="o">/</span><span class="nx">Rome</span><span class="p">]</span>
-<span class="p">&gt;</span><span class="w"> </span><span class="nx">Do</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="nx">want</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">generate</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">tasks</span><span class="p">.</span><span class="nx">py</span><span class="o">/</span><span class="nx">Makefile</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">automate</span><span class="w"> </span><span class="nx">generation</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">publishing</span><span class="p">?</span><span class="w"> </span><span class="p">(</span><span class="nx">Y</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span><span class="w"> </span><span class="nx">n</span>
-<span class="nx">Done</span><span class="p">.</span><span class="w"> </span><span class="nx">Your</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">project</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">available</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Vergica</span><span class="err">\</span><span class="nx">PycharmProjects</span><span class="err">\</span><span class="nx">Blog</span>
-</code></pre></div>
+        </div>
+        </article>
 
-<p>新建一个简单的博客用以测试。注意须指定文件编码为utf-8，但代码中不应出现连字号：</p>
-<div class="highlight"><pre><span></span><code>echo &quot;Title: My First Review&quot; &quot;Date: 2010-12-03 10:20&quot; &quot;Category: Review&quot; &quot;Following is a review of my favorite mechanical keyboard.&quot; | out-file content\review.md -encoding utf8
-</code></pre></div>
+        <div class="divider"><!-- lines divider --></div>
 
-<p>生成静态文件并监听本地8000号端口：</p>
-<div class="highlight"><pre><span></span><code><span class="na">.venv</span><span class="err">\</span><span class="no">Scripts</span><span class="err">\</span><span class="no">pelican</span><span class="w"> </span><span class="no">content</span>
-<span class="na">.venv</span><span class="err">\</span><span class="no">Scripts</span><span class="err">\</span><span class="no">pelican</span><span class="w"> </span><span class="p">--</span><span class="no">listen</span>
-</code></pre></div>
+        <article class="text-center" data-animation="bounceIn">
+        <a href="blog.html" class="plusNav" title="more from blog">+</a> 
+        </article>
 
-<p>若操作得当，此时<a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>可正常访问，显示为初始博客界面。</p>
-<h3>推送至GtiHub</h3>
-<p>首先，应确保电脑上安装了Git，接下来的操作会在Git Bash中进行。</p>
-<p>在博客目录下的output文件夹打开Git Bash。初始化Git仓库，并配置用户信息：</p>
-<div class="highlight"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">init</span>
-<span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="k">user</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="ss">&quot;vergica&quot;</span><span class="w"> </span><span class="o">--</span><span class="k">global</span>
-<span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="k">user</span><span class="p">.</span><span class="n">email</span><span class="w"> </span><span class="ss">&quot;1234567890@qq.com&quot;</span><span class="w"> </span><span class="c1">--global</span>
-</code></pre></div>
+    </div>
+    </section>
+    <!-- /BLOG -->
 
-<p>在GitHub创建一个新的公共仓库，复制SSH链接，添加仓库：</p>
-<div class="highlight"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">vergica</span><span class="o">/</span><span class="n">vergica</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
-</code></pre></div>
+<!-- FOOTER -->
+<footer>
 
-<p>现在，本地仓库就和远程仓库建立好了对应的联系。</p>
-<p>然后我们需要生成一对密钥，可选的选项大多选择默认即可：</p>
-<div class="highlight"><pre><span></span><code>ssh-keygen
-</code></pre></div>
+  <!-- SCROOL TO TOP -->
+<!--  <a href="#toTop" class="fa fa-arrow-up toTop"></a>-->
 
-<p>输出的末尾为randomart image，表示密钥生成成功。打开密钥所在目录，复制公钥内容。</p>
-<p>浏览器访问<a href="https://github.com/settings/keys">SSH and GPG keys</a>，选择新建SSH key，填写公钥并确认。</p>
-<p>最后重新回到本地，完成推送：</p>
-<div class="highlight"><pre><span></span><code>git add .
-git commit -m &quot;init&quot;
-git push -u origin master
-</code></pre></div>
+  <div class="container">
 
-<p>前往打开仓库的GitHub Pages，如https://github.com/vergica/vergica.github.io/settings/pages ，即完成了初步部署。</p>                </article>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="https://getpelican.com/">Pelican</a></li>
-                            <li><a href="https://www.python.org/">Python.org</a></li>
-                            <li><a href="https://palletsprojects.com/p/jinja/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+    <div class="row">
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        <div class="col-md-6 copyright">
+            梅岭随记
+            <br />2024 &copy; All Rights Reserved.
+        </div>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-                </address><!-- /#about -->
+        <div class="col-md-6 text-right">
+        </div>
 
-                <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+    </div>
+
+  </div>
+</footer>
+<!-- /FOOTER -->
+
+
+
+<!-- CORE FILES -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.isotope.js"></script>
+<script type="text/javascript" src="/theme/js/masonry.js"></script>
+
+<!-- PLUGINS -->
+<script type="text/javascript" src="/theme/js/jquery.fitvids.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.superslides.min.js"></script>
+<script type="text/javascript" src="/theme/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="/theme/js/holder.js"></script>
+<!-- delete on production -->
+
+<!-- js scripts -->
+<script async type="text/javascript" src="/theme/js/scripts.js"></script>
+
+<script type="text/javascript" src="/theme/js/ImageAutoResize.js"></script>
+<script type="text/javascript" src="/theme/js/application.js"></script>
+
+
+
 
 </body>
-</html>

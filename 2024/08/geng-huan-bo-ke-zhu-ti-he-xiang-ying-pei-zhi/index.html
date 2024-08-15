@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>梅岭随记 - 挪希的博客</title>
+    <meta name="description" content="" />
+    <meta name="Author" content="Vergica" />
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/plugins/lt-ie9/html5.js"></script>
+    <script type="text/javascript" src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/plugins/lt-ie9/respond.min.js"></script>
+    <script type="text/javascript" src="http://stepofweb.gweb.io/.templates/IsisOne/HTML/assets/plugins/lt-ie9/excanvas.compiled.js"></script>
+    <![endif]-->
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Dosis:300,400" rel="stylesheet" type="text/css" />
+
+
+    <!-- CORE CSS FRAMEWORK -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- CSS TEMPLATE -->
+    <link href="/theme/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/theme/css/framework.css" rel="stylesheet" type="text/css" />
+    <link href="/theme/css/typography.css" rel="stylesheet" type="text/css" />
+    <link href="/theme/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <link href="/theme/css/blog.css" rel="stylesheet" type="text/css" />
+
+    <!-- ICONS -->
+        <link rel="shortcut icon" href="/theme/img/icon.jpg" type="image/x-icon" />
+        <link rel="icon" href="/theme/img/icon.jpg" type="image/x-icon" />
+        <link rel="shortcut icon" href="/theme/img/icon.jpg" type="image/x-icon" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- Morenizr -->
+    <script type="text/javascript" src="/theme/js/modernizr.min.js"></script>
+
+    <!-- google authorship -->
+</head>
+<body>
+
+<!-- Main Nav -->
+<header id="header" style="margin-top:0">
+
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenu" class="fa fa-bars" type="button" data-toggle="collapse" data-target=".navbar-collapse"></button>
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+<!--        <a class="navbar-brand scrollTo" href="#home">-->
+        <a class="navbar-brand" href="/">
+          <img src="/theme/img/icon.jpg" alt="" width="50" height="50" />
+          <span class="hidden-xs">梅岭随记</span>
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <!-- Fullscreen Button - Unavailable for IE -->
+<!--        <a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>-->
+
+        <ul class="nav navbar-nav navbar-right">
+          <!-- If the user wants to make articles the home page then remove blog link, and make about and work links point to old home page. -->
+            <li><a href="/index.html#home">Home</a></li>
+            <li><a href="/index.html#about">About</a></li>
+            <li><a href="/index.html#work">Work</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+</header>
+<!-- /Main Nav -->  <section id="blog">
+    <article class="container">
+
+      <div class="row">
+        <div id="blog_main_area" class="left col-md-9">
+  <!-- article title -->
+  <header>
+      <h1>更换博客主题和相应配置</h1>
+    <small class="fsize13">
+            <a href="/category/python.html" rel="tag tooltip" class="label label-default light" data-placement="right" data-original-title="2 articles in this category"><i class="fa fa-dot-circle-o"></i> Python</a>
+<!--      <a href="/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/#disqus_thread" class="scrollTo label label-default light" data-disqus-identifier="2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/"><i class="fa fa-comment-o"></i> ?? Comments</a>-->
+      <span class="label label-default light">2024-08-15</span> 
+    </small>
+  </header>
+
+  <article class='content'>
+    <p>下载主题<a href="https://github.com/KenMercusLai/BT3-Flat">BT3-Flat</a>至博客根目录：</p>
+<div class="highlight"><pre><span></span><code><span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="nl">com</span><span class="p">:</span><span class="n">KenMercusLai</span><span class="o">/</span><span class="n">BT3</span><span class="o">-</span><span class="n">Flat</span><span class="p">.</span><span class="n">git</span>
+</code></pre></div>
+
+<p>修改配置文件pelicanconf.py：</p>
+<div class="highlight"><pre><span></span><code><span class="o">......</span>
+<span class="err">#</span><span class="w"> </span><span class="nt">Blogroll</span>
+<span class="nt">LINKS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;Pelican&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;https://getpelican.com/&quot;</span><span class="o">),</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;Python.org&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;https://www.python.org/&quot;</span><span class="o">),</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;Jinja2&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;https://palletsprojects.com/p/jinja/&quot;</span><span class="o">),</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;You can modify those links in your config file&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;#&quot;</span><span class="o">),</span>
+<span class="o">)</span>
+
+<span class="err">#</span><span class="w"> </span><span class="nt">Social</span><span class="w"> </span><span class="nt">widget</span>
+<span class="nt">SOCIAL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;You can add links in your config file&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;#&quot;</span><span class="o">),</span>
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;Another social link&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;#&quot;</span><span class="o">),</span>
+<span class="o">)</span>
+
+<span class="err">#</span><span class="w"> </span><span class="nt">DEFAULT_PAGINATION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">False</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nt">注意开启分页功能</span>
+
+<span class="err">#</span><span class="w"> </span><span class="nt">Uncomment</span><span class="w"> </span><span class="nt">following</span><span class="w"> </span><span class="nt">line</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nt">you</span><span class="w"> </span><span class="nt">want</span><span class="w"> </span><span class="nt">document-relative</span><span class="w"> </span><span class="nt">URLs</span><span class="w"> </span><span class="nt">when</span><span class="w"> </span><span class="nt">developing</span>
+<span class="err">#</span><span class="w"> </span><span class="nt">RELATIVE_URLS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">True</span>
+
+<span class="err">###############</span><span class="w"> </span><span class="nt">主题配置</span><span class="w"> </span><span class="err">###############</span>
+
+<span class="nt">THEME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;BT3-FLAT&quot;</span>
+
+<span class="nt">DEFAULT_PAGINATION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">True</span>
+<span class="nt">POST_LIMIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">3</span>
+
+<span class="nt">PAGINATED_TEMPLATES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="err">&quot;blog-index&quot;:</span><span class="w"> </span><span class="err">None</span><span class="p">}</span>
+<span class="nt">DIRECT_TEMPLATES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="s2">&quot;index&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;tags&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;categories&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;authors&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;archives&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;blog-index&quot;</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;blog&quot;</span><span class="o">)</span>
+
+<span class="nt">DEFAULT_DATE_FORMAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;%Y-%m-%d&quot;</span>
+
+<span class="nt">ARTICLE_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;{date:%Y}/{date:%m}/{slug}/&quot;</span>
+<span class="nt">ARTICLE_SAVE_AS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;{date:%Y}/{date:%m}/{slug}/index.html&quot;</span>
+
+<span class="nt">SITESUBTITLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;挪希的博客&quot;</span>
+
+<span class="nt">FAVICON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/theme/img/icon.jpg&quot;</span>
+<span class="nt">ICON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/theme/img/icon.jpg&quot;</span>
+<span class="nt">SHORTCUT_ICON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/theme/img/icon.jpg&quot;</span>
+
+<span class="nt">HEADER_IMAGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/theme/img/icon.jpg&quot;</span>
+<span class="nt">BACKGROUND_IMAGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/theme/img/background.jpg&quot;</span>
+
+<span class="nt">COPYRIGHT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;2024 &amp;copy; All Rights Reserved.&quot;</span>
+
+<span class="nt">PERSONAL_INFO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;xxxxxx&quot;</span>
+<span class="nt">PERSONAL_PHOTO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/theme/img/personal_photo.jpg&quot;</span>
+
+<span class="nt">WORK_DESCRIPTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">True</span>
+<span class="nt">WORK_LIST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">()</span>
+</code></pre></div>
+
+<p>修改主题模板about.html：</p>
+<div class="highlight"><pre><span></span><code>......
+<span class="cm">&lt;!--修改默认背景图片--&gt;</span>
+<span class="cm">&lt;!--</span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">HEADER_IMAGE</span>  <span class="cp">%}</span><span class="cm">--&gt;</span>
+<span class="cm">&lt;!--&lt;div style=&quot;background-image: url(&#39;</span><span class="cp">{{</span><span class="nv">HEADER_IMAGE</span><span class="cp">}}</span><span class="cm">&#39;);&quot; class=&quot;fullscreen-img&quot;&gt;&lt;/div&gt;--&gt;</span>
+<span class="cm">&lt;!--</span><span class="cp">{%</span><span class="k">else</span><span class="cp">%}</span><span class="cm">--&gt;</span>
+<span class="cm">&lt;!--&lt;div style=&quot;background-image: url(&#39;</span><span class="cp">{{</span> <span class="nv">BACKGROUND_IMAGE</span> <span class="cp">}}</span><span class="cm">&#39;);&quot; class=&quot;fullscreen-img&quot;&gt;&lt;/div&gt;--&gt;</span>
+<span class="cm">&lt;!--</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="cm">--&gt;</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">BACKGROUND_IMAGE</span>  <span class="cp">%}</span>
+<span class="nt">&lt;div</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;background-image: url(&#39;</span><span class="cp">{{</span> <span class="nv">BACKGROUND_IMAGE</span> <span class="cp">}}</span><span class="s">&#39;);&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;fullscreen-img&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+......
+<span class="cm">&lt;!--修改个人图片外边距--&gt;</span>
+<span class="cp">{%</span> <span class="k">if</span> <span class="nv">PERSONAL_PHOTO</span> <span class="cp">%}</span>
+<span class="cm">&lt;!--&lt;div class=&quot;me-picture text-center&quot;&gt;--&gt;</span>
+<span class="nt">&lt;div</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;me-picture text-center&quot;</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;margin-bottom: 0 !important;&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;div</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;item&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;img</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;img-responsive&quot;</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;</span><span class="cp">{{</span><span class="nv">PERSONAL_PHOTO</span><span class="cp">}}</span><span class="s">&quot;</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;200&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;200&quot;</span><span class="w"> </span><span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/div&gt;&lt;hr</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+......
+<span class="cm">&lt;!--取消作品说明--&gt;</span>
+<span class="cm">&lt;!--</span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">WORK_DESCRIPTION</span> <span class="cp">%}</span><span class="cm">--&gt;</span>
+<span class="cm">&lt;!--&lt;article&gt;--&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--&lt;p&gt;--&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span><span class="cp">{{</span><span class="nv">WORK_DESCRIPTION</span><span class="cp">}}</span><span class="cm">--&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--&lt;/p&gt;--&gt;</span>
+<span class="cm">&lt;!--&lt;/article&gt;--&gt;</span>
+<span class="cm">&lt;!--</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="cm">--&gt;</span>
+......
+</code></pre></div>
+
+<p>还有一些零散的改动如下，文件名标注在注释中：</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!--footer.html--&gt;</span>
+<span class="cm">&lt;!--&lt;a href=&quot;#toTop&quot; class=&quot;fa fa-arrow-up toTop&quot;&gt;&lt;/a&gt;--&gt;</span>
+
+<span class="cm">&lt;!--header.html--&gt;</span>
+<span class="nt">&lt;meta</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Author&quot;</span><span class="w"> </span><span class="na">content=</span><span class="s">&quot;Vergica&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="cm">&lt;!--nav.html--&gt;</span>
+<span class="cm">&lt;!--&lt;a class=&quot;navbar-brand scrollTo&quot; href=&quot;#home&quot;&gt;--&gt;</span>
+<span class="nt">&lt;a</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;navbar-brand&quot;</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+......
+<span class="cm">&lt;!--&lt;a href=&quot;#&quot; class=&quot;btn-fullscreen&quot;&gt;&lt;i class=&quot;fa fa-external-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;--&gt;</span>
+</code></pre></div>
+
+<p>由于我暂不开启评论功能，因此将所有类似语句注释了。改动分别位于article.html、blog.html和blog-index.html中：</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/</span><span class="cp">{{</span><span class="nv">article.url</span><span class="cp">}}</span><span class="s">#disqus_thread&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;scrollTo label label-default light&quot;</span><span class="w"> </span><span class="na">data-disqus-identifier=</span><span class="s">&quot;</span><span class="cp">{{</span><span class="nv">article.url</span><span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;&lt;i</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;fa fa-comment-o&quot;</span><span class="nt">&gt;&lt;/i&gt;</span><span class="w"> </span>??<span class="w"> </span>Comments<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>
+
+<p>另外文章的分页功能需要做一些调整，对application.js修改如下：</p>
+<div class="highlight"><pre><span></span><code><span class="o">......</span>
+<span class="o">//</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="n">maker</span>
+
+<span class="o">//</span><span class="w">    </span><span class="n">function</span><span class="w"> </span><span class="n">makeCounter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="o">...</span>
+<span class="o">//</span><span class="w">    </span><span class="p">}</span>
+
+<span class="o">//</span><span class="w"> </span><span class="n">ajax</span><span class="o">-</span><span class="n">like</span><span class="w"> </span><span class="nb">load</span><span class="w"> </span><span class="n">blog</span><span class="w"> </span><span class="n">index</span>
+<span class="o">//</span><span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">makeCounter</span><span class="p">();</span>
+<span class="o">//</span><span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">index_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">counter</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="o">//</span><span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">POST_LIMIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="o">//</span><span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">POST_COUNT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseInt</span><span class="p">(</span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#blog_main_area&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">),</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="o">//</span><span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#prev&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="o">...</span>
+<span class="o">//</span><span class="w">      </span><span class="p">}</span>
+<span class="o">//</span>
+<span class="o">//</span><span class="w">    </span><span class="p">});</span>
+<span class="o">//</span><span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#next&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="o">...</span>
+<span class="o">//</span><span class="w">    </span><span class="p">});</span>
+
+
+<span class="o">///////////////</span><span class="w"> </span><span class="err">重写分页功能</span><span class="w"> </span><span class="o">///////////////</span>
+<span class="k">var</span><span class="w"> </span><span class="n">index_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">var</span><span class="w"> </span><span class="n">POST_LIMIT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="k">var</span><span class="w"> </span><span class="n">POST_COUNT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#blog_main_area div.item&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">POST_COUNT</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#next&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">addClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+
+<span class="n">function</span><span class="w"> </span><span class="n">checkClickable</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#prev&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hasClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">index_num</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#prev&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">removeClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#next&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hasClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">index_num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">POST_LIMIT</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">POST_COUNT</span><span class="p">)</span>
+<span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#next&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">removeClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!$</span><span class="p">(</span><span class="s1">&#39;#prev&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hasClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">index_num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#prev&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">addClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!$</span><span class="p">(</span><span class="s1">&#39;#next&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hasClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">index_num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">POST_LIMIT</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">POST_COUNT</span><span class="p">)</span>
+<span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#next&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">addClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="o">$</span><span class="p">(</span><span class="s1">&#39;#prev&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!$</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">hasClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">index_num</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#blog_main_area div.item&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">$</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="k">is</span><span class="p">(</span><span class="s1">&#39;:visible&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">$</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#blog_main_area div.item&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">slice</span><span class="p">((</span><span class="n">index_num</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">POST_LIMIT</span><span class="p">,</span><span class="w"> </span><span class="n">index_num</span><span class="o">*</span><span class="n">POST_LIMIT</span><span class="p">)</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="o">$</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="n">checkClickable</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+
+<span class="o">$</span><span class="p">(</span><span class="s1">&#39;#next&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!$</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">hasClass</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">index_num</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#blog_main_area div.item&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">$</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="k">is</span><span class="p">(</span><span class="s1">&#39;:visible&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">$</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="o">$</span><span class="p">(</span><span class="s1">&#39;#blog_main_area div.item&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">slice</span><span class="p">((</span><span class="n">index_num</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">POST_LIMIT</span><span class="p">,</span><span class="w"> </span><span class="n">index_num</span><span class="o">*</span><span class="n">POST_LIMIT</span><span class="p">)</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="o">$</span><span class="p">(</span><span class="n">this</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;slow&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="n">checkClickable</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+  </article>
+
+  <div class="divider"><!-- lines divider --></div>
+
+  <!-- SOCIAL -->
+<p class="socials">
+    <a href="http://www.facebook.com/sharer/sharer.php?u=/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-facebook" target="_blank" title="Share on Facebook"><!-- facebook --></a>
+    <a href="http://twitter.com/home?status=/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-twitter" target="_blank" title="Share on Twitter"><!-- twitter --></a>
+    <a href="https://plus.google.com/share?url=/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-google-plus" target="_blank" title="Share on Google+"><!-- google plus --></a>
+    <a href="http://pinterest.com/pin/create/link/?url==/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/" class="rounded-icon social fa fa-pinterest"  target="_blank" title="Share on Pinterest"><!-- pinterest --></a>
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/&title=更换博客主题和相应配置&summary=&source=" class="rounded-icon social fa fa-linkedin" target="_blank" title="Share on Linkedin"><!-- linkedin --></a>
+</p>  
+
+  <!-- TAGS -->
+  <p class="fsize16"> Tags:
+        <a href="/tag/pelican.html" rel="tooltip" class="label label-default light" data-placement="right" data-original-title="2 articles with this tag"><i class="fa fa-tags"></i> Pelican</a>
+        <a href="/tag/theme.html" rel="tooltip" class="label label-default light" data-placement="right" data-original-title="1 article with this tag"><i class="fa fa-tags"></i> Theme</a>
+  </p>
+
+  <hr /><!-- divider -->
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="right col-md-3">
+          <!-- recent work -->
+          <!-- <div class="widget">
+
+                      <h3>Recent Work</h3>
+
+                      <a class="popup-image thumb" href="assets/images/preview/slider/1.jpg">
+                          <img src="/theme/img/1x1.png" class="img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
+                      </a>
+                      <a class="popup-video thumb" href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0">
+                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
+                      </a>
+                      <a class="popup-video thumb" href="http://vimeo.com/23630702">
+                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
+                      </a>
+
+                      <a class="external ajax-project thumb" href="project-external-1.html">
+                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
+                      </a>
+                      <a class="external ajax-project thumb" href="project-external-2.html">
+                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
+                      </a>
+                      <a class="external ajax-project thumb" href="project-external-3.html">
+                          <img src="/theme/img/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
+                      </a>
+
+                      <div class="clearfix"></div>
+                  </div> -->
+
+          <!-- categories -->
+          <div class="widget">
+
+            <h3>Categories</h3>
+
+            <ul>
+               <li><a class="theme_link" href="/category/python.html"><i class="fa fa-dot-circle-o"></i> Python</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <!-- Archives -->
+          <div class="widget">
+
+            <h3>Archives</h3>
+
+            <!-- Get all of the articles with their dates -->
+            <div class="hidden">
+                None
+                None
+            </div>
+
+            <!-- If the user indicates they prefer a list.-->                <ul class="tree">
+                    <li>
+                        <span><i class="fa fa-minus-square-o"></i>2024</span>
+                        <ul>
+                            <li>
+                                <span><i class="fa fa-plus-square-o"></i>2024-08</span>
+                                <ul>
+                                        <li style="display: none;">
+                                            <a class="theme_link" href="/2024/08/geng-huan-bo-ke-zhu-ti-he-xiang-ying-pei-zhi/">
+                                            <small>2024-08-15</small>更换博客主题和相应配置</a>
+                                        </li>
+                                        <li style="display: none;">
+                                            <a class="theme_link" href="/2024/08/windowsxi-tong-xia-shi-yong-pelican-github-pagesbu-shu-ge-ren-bo-ke/">
+                                            <small>2024-08-15</small>Windows系统下使用Pelican + GitHub Pages部署个人博客</a>
+                                        </li>
+                                </ul>
+                            </li>
+                        </ul></li>
+                </ul></div>
+
+        </div>
+        <!-- /SIDEBAR -->
+
+      </div>
+
+    </article>
+  </section>
+  <!-- /BLOG -->
+
+<!-- FOOTER -->
+<footer>
+
+  <!-- SCROOL TO TOP -->
+<!--  <a href="#toTop" class="fa fa-arrow-up toTop"></a>-->
+
+  <div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6 copyright">
+            梅岭随记
+            <br />2024 &copy; All Rights Reserved.
+        </div>
+
+        <div class="col-md-6 text-right">
+        </div>
+
+    </div>
+
+  </div>
+</footer>
+<!-- /FOOTER -->
+
+
+
+<!-- CORE FILES -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.isotope.js"></script>
+<script type="text/javascript" src="/theme/js/masonry.js"></script>
+
+<!-- PLUGINS -->
+<script type="text/javascript" src="/theme/js/jquery.fitvids.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.superslides.min.js"></script>
+<script type="text/javascript" src="/theme/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="/theme/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="/theme/js/holder.js"></script>
+<!-- delete on production -->
+
+<!-- js scripts -->
+<script async type="text/javascript" src="/theme/js/scripts.js"></script>
+
+<script type="text/javascript" src="/theme/js/ImageAutoResize.js"></script>
+<script type="text/javascript" src="/theme/js/application.js"></script>
+
+
+
+
+
+</body>
+
+</html>
