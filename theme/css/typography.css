@@ -92,6 +92,7 @@ section header p {
 }
 section ul, section ul li {
   margin:0;
+  list-style-type:circle;
 /*  padding:0;
   list-style:none;*/
 }
