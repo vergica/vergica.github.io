@@ -104,34 +104,38 @@
 <div class="highlight"><pre><span></span><code><span class="n">torchvision</span><span class="p">.</span><span class="n">datasets</span><span class="p">.</span><span class="n">CIFAR10</span><span class="p">(</span><span class="nl">root</span><span class="p">:</span><span class="w"> </span><span class="ow">Union</span><span class="o">[</span><span class="n">str, Path</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="nl">train</span><span class="p">:</span><span class="w"> </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="p">,</span><span class="w"> </span><span class="nl">transform</span><span class="p">:</span><span class="w"> </span><span class="n">Optional</span><span class="o">[</span><span class="n">Callable</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span><span class="p">,</span><span class="w"> </span><span class="nl">target_transform</span><span class="p">:</span><span class="w"> </span><span class="n">Optional</span><span class="o">[</span><span class="n">Callable</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span><span class="p">,</span><span class="w"> </span><span class="nl">download</span><span class="p">:</span><span class="w"> </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="p">)</span>
 </code></pre></div>
 
-<p>参数：
-- root - 数据库的根目录，即<code>cifar-10-batches-py</code>所在的目录，若<code>cifar-10-batches-py</code>不存在且<code>download</code>为True时将保存在此。
-- train - 设置为True时，从训练集创建数据库，否则从测试集创建。
-- transform - 一个函数或transform（PyTorch提供的特殊成员，既可作为类，也可当作函数），接收一张PIL图片，返回其变换后的结果。
-- target_transform - 一个函数或transform，能接收并修改图片标签。
-- download - 设置为True时，将从官网下载数据集并保存到根目录。如果数据集已经被下载，则不会再次下载。</p>
+<p>参数：</p>
+<ul>
+<li>root - 数据库的根目录，即<code>cifar-10-batches-py</code>所在的目录，若<code>cifar-10-batches-py</code>不存在且<code>download</code>为True时将保存在此。</li>
+<li>train - 设置为True时，从训练集创建数据库，否则从测试集创建。</li>
+<li>transform - 一个函数或transform（PyTorch提供的特殊成员，既可作为类，也可当作函数），接收一张PIL图片，返回其变换后的结果。</li>
+<li>target_transform - 一个函数或transform，能接收并修改图片标签。</li>
+<li>download - 设置为True时，将从官网下载数据集并保存到根目录。如果数据集已经被下载，则不会再次下载。</li>
+</ul>
 <p>在获取数据之后，需用调用<code>torch.utils.data.DataLoader</code>进行加载（比如指定分批的数量、取样的顺序、工作进程的数量等）。使用方法如下：</p>
 <div class="highlight"><pre><span></span><code>torch.utils.data.DataLoader(dataset, batch_size=1, shuffle=None, sampler=None, batch_sampler=None, num_workers=0, collate_fn=None, pin_memory=False, drop_last=False, timeout=0, worker_init_fn=None, multiprocessing_context=None, generator=None, *, prefetch_factor=None, persistent_workers=False, pin_memory_device=&#39;&#39;, in_order=True)
 </code></pre></div>
 
-<p>参数：
-- dataset - 用以加载数据的数据集。
-- batch_size - 每批数据加载的样本数量。
-- shuffle - 是否在每轮打乱数据。
-- sampler - 定义从数据集取样的方式（比如顺序或乱序等），与<code>shuffle</code>冲突。
-- batch_sampler - 与<code>sampler</code>类似，但每次返回一批索引，与<code>batch_size</code>，<code>shuffle</code>，<code>sampler</code>和<code>drop_last</code>冲突。
-- num_workers - 用于加载数据的子进程数量。若为0则表示将在主进程加载。
-- collate_fn - 将一系列样本合成为小批的张量，在分批读取映射式数据集时使用。（<code>DataLoader</code>可接收映射式数据集和可迭代式数据集，官方认为后者适用于随机读取开销大或批量大小取决于获取的数据的情况。）
-- pin_memory - 设置为True时，数据加载器会在返回张量前，将其拷贝到设备/CUDA的固定内存中。
-- drop_last - 若为True，在数据集大小不能被批量大小整除时，舍弃最后的不完整的批次。而为False时，若无法整除，则最后一批样本数量减少。
-- timeout - 若为正数，将限制从进程获取批量数据的时间。（应始终为非负数）
-- worker_init_fn - 如果不为<code>None</code>，这会在每个工作子进程中被调用，传递<code>worker id</code>（<code>[0, num_workers - 1]</code>中的整数）作为输入，发生在设置种子之后加载数据之前。
-- multiprocessing_context - 若值为<code>None</code>，则使用操作系统默认的多进程上下文（如<code>spawn</code>，<code>fork</code>或<code>forkserver</code>）。
-- generator - 若不为<code>None</code>，该RNG（随机数生成器）将被<code>RandomSampler</code>用于生成随机索引，并被多进程用于生成<code>base_seed</code>。
-- prefetch_factor - 每个进程中提前加载的批次的数量。若为2则说明共有2 * <code>num_workers</code>的批次预加载。
-- persistent_workers - 设置为<code>True</code>时，数据加载器将不会在数据集被使用后关闭工作进程。这能使数据集的实例保持激活。（这是官方的表述，有点抽象，大概用于提高模型训练效率。）
-- pin_memory_device - 数据加载器会在返回前将张量拷贝到设备的固定内存中（如果<code>pin_memory</code>为<code>True</code>）。
-- in_order - 如果设为<code>False</code>，则数据加载器不会强制批次以先进先出的顺序返回。只在<code>num_workers</code> &gt; 0时生效。</p>
+<p>参数：</p>
+<ul>
+<li>dataset - 用以加载数据的数据集。</li>
+<li>batch_size - 每批数据加载的样本数量。</li>
+<li>shuffle - 是否在每轮打乱数据。</li>
+<li>sampler - 定义从数据集取样的方式（比如顺序或乱序等），与<code>shuffle</code>冲突。</li>
+<li>batch_sampler - 与<code>sampler</code>类似，但每次返回一批索引，与<code>batch_size</code>，<code>shuffle</code>，<code>sampler</code>和<code>drop_last</code>冲突。</li>
+<li>num_workers - 用于加载数据的子进程数量。若为0则表示将在主进程加载。</li>
+<li>collate_fn - 将一系列样本合成为小批的张量，在分批读取映射式数据集时使用。（<code>DataLoader</code>可接收映射式数据集和可迭代式数据集，官方认为后者适用于随机读取开销大或批量大小取决于获取的数据的情况。）</li>
+<li>pin_memory - 设置为True时，数据加载器会在返回张量前，将其拷贝到设备/CUDA的固定内存中。</li>
+<li>drop_last - 若为True，在数据集大小不能被批量大小整除时，舍弃最后的不完整的批次。而为False时，若无法整除，则最后一批样本数量减少。</li>
+<li>timeout - 若为正数，将限制从进程获取批量数据的时间。（应始终为非负数）</li>
+<li>worker_init_fn - 如果不为<code>None</code>，这会在每个工作子进程中被调用，传递<code>worker id</code>（<code>[0, num_workers - 1]</code>中的整数）作为输入，发生在设置种子之后加载数据之前。</li>
+<li>multiprocessing_context - 若值为<code>None</code>，则使用操作系统默认的多进程上下文（如<code>spawn</code>，<code>fork</code>或<code>forkserver</code>）。</li>
+<li>generator - 若不为<code>None</code>，该RNG（随机数生成器）将被<code>RandomSampler</code>用于生成随机索引，并被多进程用于生成<code>base_seed</code>。</li>
+<li>prefetch_factor - 每个进程中提前加载的批次的数量。若为2则说明共有2 * <code>num_workers</code>的批次预加载。</li>
+<li>persistent_workers - 设置为<code>True</code>时，数据加载器将不会在数据集被使用后关闭工作进程。这能使数据集的实例保持激活。（这是官方的表述，有点抽象，大概用于提高模型训练效率。）</li>
+<li>pin_memory_device - 数据加载器会在返回前将张量拷贝到设备的固定内存中（如果<code>pin_memory</code>为<code>True</code>）。</li>
+<li>in_order - 如果设为<code>False</code>，则数据加载器不会强制批次以先进先出的顺序返回。只在<code>num_workers</code> &gt; 0时生效。</li>
+</ul>
 <p>虽然本文使用CIFAR-10数据库，图片均为32x32的相同格式彩图，但考虑到普遍情况下数据集中样本格式差异，应当进行归一化处理（消除量纲的影响）。</p>
 <p>完整代码如下：</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
@@ -148,7 +152,7 @@
 </code></pre></div>
 
 <h4>构建网络</h4>
-<p>查询论文《<a href="https://ieeexplore.ieee.org/document/726791">Gradient-based learning applied to document recognition</a>》可知LeNet的具体结构如下：<img alt="LeNet的结构" src="https://article.biliimg.com/bfs/new_dyn/ff41b3efbcd95fb5103e43ebe8d9e4151987815219.png"></p>
+<p>查询论文《<a href="https://ieeexplore.ieee.org/document/726791">Gradient-based learning applied to document recognition</a>》可知LeNet的具体结构如下：<img alt="LeNet的结构" src="https://raw.githubusercontent.com/vergica/images/main/%E5%9F%BA%E4%BA%8EPyTorch%E5%AE%9E%E7%8E%B0LeNet%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_1.png"></p>
   </article>
 
   <div class="divider"><!-- lines divider --></div>
