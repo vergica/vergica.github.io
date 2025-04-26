@@ -188,7 +188,18 @@
         <span class="k">return</span> <span class="nb">x</span>
 </code></pre></div>
 
-<p>代码中涉及的<code>nn.Conv2d</code>，<code>nn.Linear</code>，<code>F.relu</code>，<code>F.avg_pool2d</code>并不难理解，可查看官方文档的<a href="https://pytorch.org/docs/stable/nn.html">torch.nn</a>和<a href="https://pytorch.org/docs/stable/nn.functional.html">nn.functional</a>了解详细用法。</p>
+<p>代码中涉及的<code>nn.Conv2d</code>，<code>nn.Linear</code>，<code>F.relu</code>，<code>F.avg_pool2d</code>并不难理解，可查看官方文档的<a href="https://pytorch.org/docs/stable/nn.html">torch.nn</a>和<a href="https://pytorch.org/docs/stable/nn.functional.html">nn.functional</a>了解详细用法。<code>view()</code>起到把特征图展平的作用，换句话说，它不改变数据本身但重新组合了数据，官方称其为“提供了一个已知张量的<code>View</code>”（<code>View</code>是一个新的张量）。使用方法为<code>Tensor.view(*shape)</code>，<code>shape</code>指期望的张量大小。
+举例：</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; x = torch.randn(4, 4)
+&gt;&gt;&gt; x.size()
+torch.Size([4, 4])
+&gt;&gt;&gt; y = x.view(16)
+&gt;&gt;&gt; y.size()
+torch.Size([16])
+&gt;&gt;&gt; z = x.view(-1, 8)  # -1指该维度大小由其他维度推断
+&gt;&gt;&gt; z.size()
+torch.Size([2, 8])
+</code></pre></div>
   </article>
 
   <div class="divider"><!-- lines divider --></div>
