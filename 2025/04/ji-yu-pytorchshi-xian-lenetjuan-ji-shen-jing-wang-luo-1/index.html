@@ -136,13 +136,15 @@
 <li>pin_memory_device - 数据加载器会在返回前将张量拷贝到设备的固定内存中（如果<code>pin_memory</code>为<code>True</code>）。</li>
 <li>in_order - 如果设为<code>False</code>，则数据加载器不会强制批次以先进先出的顺序返回。只在<code>num_workers</code> &gt; 0时生效。</li>
 </ul>
-<p>虽然本文使用CIFAR-10数据库，图片均为32x32的相同格式彩图，但考虑到普遍情况下数据集中样本格式差异，应当进行归一化处理（消除量纲的影响）。</p>
+<p>虽然本文使用CIFAR-10数据库，图片均为32x32的相同格式彩图，但考虑到普遍情况下，数据集样本的格式存在差异，应当进行归一化处理。</p>
 <p>完整代码如下：</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">torchvision</span>
-<span class="n">transform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="w">  </span><span class="c1"># Compose的作用为组合多个变换操作</span>
-<span class="w">    </span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span><span class="w">  </span><span class="c1"># 将PIL图像或ndarray转换为张量，并相应缩放数值</span>
-<span class="w">    </span><span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">((</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">))</span><span class="w">  </span><span class="c1"># 用平均值和标准差对张量图像进行归一化处理，为了方便数值均取0.5</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torchvision.transforms</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">v2</span>
+<span class="n">transform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v2</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="w">  </span><span class="c1"># Compose的作用为组合多个变换操作</span>
+<span class="w">    </span><span class="n">v2</span><span class="o">.</span><span class="n">ToImage</span><span class="p">(),</span><span class="w">  </span><span class="c1"># 将张量/ndarray/PIL图片转化为Image格式，不缩放</span>
+<span class="w">    </span><span class="n">v2</span><span class="o">.</span><span class="n">ToDtype</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span><span class="w">  </span><span class="c1"># 转化为float类型的张量，并进行缩放</span>
+<span class="w">    </span><span class="n">v2</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">],</span><span class="w"> </span><span class="n">std</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">])</span><span class="w">  </span><span class="c1"># 用平均值和标准差对张量图像进行归一化处理，为了方便数值取0.5</span>
 <span class="p">])</span>
 <span class="n">batch_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w">  </span><span class="c1"># 每批数据的大小</span>
 <span class="n">trainset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">CIFAR10</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;./dataset&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">train</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="w"> </span><span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="w"> </span><span class="n">transform</span><span class="o">=</span><span class="n">transform</span><span class="p">)</span>
@@ -152,7 +154,41 @@
 </code></pre></div>
 
 <h4>构建网络</h4>
-<p>查询论文《<a href="https://ieeexplore.ieee.org/document/726791">Gradient-based learning applied to document recognition</a>》可知LeNet的具体结构如下：<img alt="LeNet的结构" src="https://raw.githubusercontent.com/vergica/images/main/%E5%9F%BA%E4%BA%8EPyTorch%E5%AE%9E%E7%8E%B0LeNet%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_1.png"></p>
+<p>查询论文《<a href="https://ieeexplore.ieee.org/document/726791">Gradient-based learning applied to document recognition</a>》可知LeNet的具体结构如下：</p>
+<p><img alt="LeNet的结构" src="https://raw.githubusercontent.com/vergica/images/main/%E5%9F%BA%E4%BA%8EPyTorch%E5%AE%9E%E7%8E%B0LeNet%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C_1.png"></p>
+<p>定义一个继承<code>torch.nn.Module</code>的类，并在子类中依次注册模块即可：</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="n">Model</span>(<span class="n">nn</span>.<span class="n">Module</span>):  <span class="c1"># nn.Module为所有神经网络模块的基类</span>
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>):
+        <span class="c1"># 执行父类的构造函数</span>
+        <span class="n">super</span>().<span class="n">__init__</span>()
+        <span class="c1"># 两层卷积层</span>
+        <span class="nb">self</span>.<span class="n">conv1</span> = <span class="n">nn</span>.<span class="n">Conv2d</span>(<span class="mi">3</span>, <span class="mi">6</span>, <span class="mi">5</span>)
+        <span class="nb">self</span>.<span class="n">conv2</span> = <span class="n">nn</span>.<span class="n">Conv2d</span>(<span class="mi">6</span>, <span class="mi">16</span>, <span class="mi">5</span>)
+        <span class="c1"># 三层全连接层</span>
+        <span class="nb">self</span>.<span class="n">fc1</span> = <span class="n">nn</span>.<span class="n">Linear</span>(<span class="mi">400</span>, <span class="mi">120</span>)
+        <span class="nb">self</span>.<span class="n">fc2</span> = <span class="n">nn</span>.<span class="n">Linear</span>(<span class="mi">120</span>, <span class="mi">84</span>)
+        <span class="nb">self</span>.<span class="n">fc3</span> = <span class="n">nn</span>.<span class="n">Linear</span>(<span class="mi">84</span>, <span class="mi">10</span>)
+
+    <span class="n">def</span> <span class="n">forward</span>(<span class="nb">self</span>, <span class="nb">x</span>):
+        <span class="c1"># 卷积 -&gt; 激活 -&gt; 池化</span>
+        <span class="c1"># 论文使用了sigmoid作为激活函数，但事实上ReLU函数效果更好</span>
+        <span class="c1"># 池化层核大小为2x2，参数可写作2，也可写作(2, 2)</span>
+        <span class="c1"># [batch size, 3, 32, 32] -- conv1 --&gt; [batch size, 6, 28, 28] -- avg_pool --&gt; [batch size, 6, 14, 14]</span>
+        <span class="nb">x</span> = <span class="n">F</span>.<span class="n">avg_pool2d</span>(<span class="n">F</span>.<span class="n">relu</span>(<span class="nb">self</span>.<span class="n">conv1</span>(<span class="nb">x</span>)), <span class="mi">2</span>)
+        <span class="c1"># [batch size, 6, 14, 14] -- conv2 --&gt; [batch size, 16, 10, 10] -- avg_pool --&gt; [batch size, 16, 5, 5]</span>
+        <span class="nb">x</span> = <span class="n">F</span>.<span class="n">avg_pool2d</span>(<span class="n">F</span>.<span class="n">relu</span>(<span class="nb">self</span>.<span class="n">conv2</span>(<span class="nb">x</span>)), <span class="mi">2</span>)
+        <span class="c1"># 把 16 * 5 * 5 的特征图展平，变为[batch size, 16 * 5 * 5]，以送入全连接层</span>
+        <span class="nb">x</span> = <span class="nb">x</span>.<span class="n">view</span>(<span class="nb">x</span>.<span class="n">size</span>()[<span class="mi">0</span>], -<span class="mi">1</span>)
+        <span class="c1"># [batch size, 400] -- fc1 --&gt; [batch size, 120]</span>
+        <span class="nb">x</span> = <span class="n">F</span>.<span class="n">relu</span>(<span class="nb">self</span>.<span class="n">fc1</span>(<span class="nb">x</span>))
+        <span class="c1"># [batch size, 120] -- fc2 --&gt; [batch size, 84]</span>
+        <span class="nb">x</span> = <span class="n">F</span>.<span class="n">relu</span>(<span class="nb">self</span>.<span class="n">fc2</span>(<span class="nb">x</span>))
+        <span class="c1"># [batch size, 84] -- fc3 --&gt; [batch size, 10]</span>
+        <span class="nb">x</span> = <span class="n">F</span>.<span class="n">relu</span>(<span class="nb">self</span>.<span class="n">fc3</span>(<span class="nb">x</span>))
+        <span class="k">return</span> <span class="nb">x</span>
+</code></pre></div>
+
+<p>代码中涉及的<code>nn.Conv2d</code>，<code>nn.Linear</code>，<code>F.relu</code>，<code>F.avg_pool2d</code>并不难理解，可查看官方文档的<a href="https://pytorch.org/docs/stable/nn.html">torch.nn</a>和<a href="https://pytorch.org/docs/stable/nn.functional.html">nn.functional</a>了解详细用法。</p>
   </article>
 
   <div class="divider"><!-- lines divider --></div>
